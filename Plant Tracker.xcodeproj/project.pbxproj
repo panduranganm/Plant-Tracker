@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C6EEC022D9CB53700CB3E14 /* Plant_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC012D9CB53700CB3E14 /* Plant_TrackerApp.swift */; };
+		9C6EEC042D9CB53700CB3E14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC032D9CB53700CB3E14 /* ContentView.swift */; };
+		9C6EEC062D9CB53B00CB3E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EEC052D9CB53B00CB3E14 /* Assets.xcassets */; };
+		9C6EEC092D9CB53B00CB3E14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6EEC082D9CB53B00CB3E14 /* Preview Assets.xcassets */; };
+		9C6EEC0B2D9CB53B00CB3E14 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC0A2D9CB53B00CB3E14 /* Persistence.swift */; };
+		9C6EEC0E2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC0C2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodeld */; };
+		9C6EEC1A2D9CB53C00CB3E14 /* Plant_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC192D9CB53C00CB3E14 /* Plant_TrackerTests.swift */; };
+		9C6EEC242D9CB53C00CB3E14 /* Plant_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC232D9CB53C00CB3E14 /* Plant_TrackerUITests.swift */; };
+		9C6EEC262D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC252D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C6EEC162D9CB53C00CB3E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6EEBF62D9CB53700CB3E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6EEBFD2D9CB53700CB3E14;
+			remoteInfo = "Plant Tracker";
+		};
+		9C6EEC202D9CB53C00CB3E14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6EEBF62D9CB53700CB3E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6EEBFD2D9CB53700CB3E14;
+			remoteInfo = "Plant Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9C6EEBFE2D9CB53700CB3E14 /* Plant Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6EEC012D9CB53700CB3E14 /* Plant_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_TrackerApp.swift; sourceTree = "<group>"; };
+		9C6EEC032D9CB53700CB3E14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C6EEC052D9CB53B00CB3E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C6EEC082D9CB53B00CB3E14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9C6EEC0A2D9CB53B00CB3E14 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		9C6EEC0D2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Plant_Tracker.xcdatamodel; sourceTree = "<group>"; };
+		9C6EEC0F2D9CB53B00CB3E14 /* Plant_Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Plant_Tracker.entitlements; sourceTree = "<group>"; };
+		9C6EEC102D9CB53B00CB3E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C6EEC152D9CB53C00CB3E14 /* Plant TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plant TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6EEC192D9CB53C00CB3E14 /* Plant_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_TrackerTests.swift; sourceTree = "<group>"; };
+		9C6EEC1F2D9CB53C00CB3E14 /* Plant TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plant TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6EEC232D9CB53C00CB3E14 /* Plant_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_TrackerUITests.swift; sourceTree = "<group>"; };
+		9C6EEC252D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C6EEBFB2D9CB53700CB3E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6EEC122D9CB53C00CB3E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6EEC1C2D9CB53C00CB3E14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C6EEBF52D9CB53700CB3E14 = {
+			isa = PBXGroup;
+			children = (
+				9C6EEC002D9CB53700CB3E14 /* Plant Tracker */,
+				9C6EEC182D9CB53C00CB3E14 /* Plant TrackerTests */,
+				9C6EEC222D9CB53C00CB3E14 /* Plant TrackerUITests */,
+				9C6EEBFF2D9CB53700CB3E14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C6EEBFF2D9CB53700CB3E14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EEBFE2D9CB53700CB3E14 /* Plant Tracker.app */,
+				9C6EEC152D9CB53C00CB3E14 /* Plant TrackerTests.xctest */,
+				9C6EEC1F2D9CB53C00CB3E14 /* Plant TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C6EEC002D9CB53700CB3E14 /* Plant Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EEC012D9CB53700CB3E14 /* Plant_TrackerApp.swift */,
+				9C6EEC032D9CB53700CB3E14 /* ContentView.swift */,
+				9C6EEC052D9CB53B00CB3E14 /* Assets.xcassets */,
+				9C6EEC0A2D9CB53B00CB3E14 /* Persistence.swift */,
+				9C6EEC0F2D9CB53B00CB3E14 /* Plant_Tracker.entitlements */,
+				9C6EEC102D9CB53B00CB3E14 /* Info.plist */,
+				9C6EEC0C2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodeld */,
+				9C6EEC072D9CB53B00CB3E14 /* Preview Content */,
+			);
+			path = "Plant Tracker";
+			sourceTree = "<group>";
+		};
+		9C6EEC072D9CB53B00CB3E14 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EEC082D9CB53B00CB3E14 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C6EEC182D9CB53C00CB3E14 /* Plant TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EEC192D9CB53C00CB3E14 /* Plant_TrackerTests.swift */,
+			);
+			path = "Plant TrackerTests";
+			sourceTree = "<group>";
+		};
+		9C6EEC222D9CB53C00CB3E14 /* Plant TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9C6EEC232D9CB53C00CB3E14 /* Plant_TrackerUITests.swift */,
+				9C6EEC252D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift */,
+			);
+			path = "Plant TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C6EEBFD2D9CB53700CB3E14 /* Plant Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6EEC292D9CB53C00CB3E14 /* Build configuration list for PBXNativeTarget "Plant Tracker" */;
+			buildPhases = (
+				9C6EEBFA2D9CB53700CB3E14 /* Sources */,
+				9C6EEBFB2D9CB53700CB3E14 /* Frameworks */,
+				9C6EEBFC2D9CB53700CB3E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Plant Tracker";
+			productName = "Plant Tracker";
+			productReference = 9C6EEBFE2D9CB53700CB3E14 /* Plant Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C6EEC142D9CB53C00CB3E14 /* Plant TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6EEC2C2D9CB53C00CB3E14 /* Build configuration list for PBXNativeTarget "Plant TrackerTests" */;
+			buildPhases = (
+				9C6EEC112D9CB53C00CB3E14 /* Sources */,
+				9C6EEC122D9CB53C00CB3E14 /* Frameworks */,
+				9C6EEC132D9CB53C00CB3E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C6EEC172D9CB53C00CB3E14 /* PBXTargetDependency */,
+			);
+			name = "Plant TrackerTests";
+			productName = "Plant TrackerTests";
+			productReference = 9C6EEC152D9CB53C00CB3E14 /* Plant TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9C6EEC1E2D9CB53C00CB3E14 /* Plant TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6EEC2F2D9CB53C00CB3E14 /* Build configuration list for PBXNativeTarget "Plant TrackerUITests" */;
+			buildPhases = (
+				9C6EEC1B2D9CB53C00CB3E14 /* Sources */,
+				9C6EEC1C2D9CB53C00CB3E14 /* Frameworks */,
+				9C6EEC1D2D9CB53C00CB3E14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C6EEC212D9CB53C00CB3E14 /* PBXTargetDependency */,
+			);
+			name = "Plant TrackerUITests";
+			productName = "Plant TrackerUITests";
+			productReference = 9C6EEC1F2D9CB53C00CB3E14 /* Plant TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C6EEBF62D9CB53700CB3E14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					9C6EEBFD2D9CB53700CB3E14 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					9C6EEC142D9CB53C00CB3E14 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 9C6EEBFD2D9CB53700CB3E14;
+					};
+					9C6EEC1E2D9CB53C00CB3E14 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 9C6EEBFD2D9CB53700CB3E14;
+					};
+				};
+			};
+			buildConfigurationList = 9C6EEBF92D9CB53700CB3E14 /* Build configuration list for PBXProject "Plant Tracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C6EEBF52D9CB53700CB3E14;
+			productRefGroup = 9C6EEBFF2D9CB53700CB3E14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C6EEBFD2D9CB53700CB3E14 /* Plant Tracker */,
+				9C6EEC142D9CB53C00CB3E14 /* Plant TrackerTests */,
+				9C6EEC1E2D9CB53C00CB3E14 /* Plant TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C6EEBFC2D9CB53700CB3E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6EEC092D9CB53B00CB3E14 /* Preview Assets.xcassets in Resources */,
+				9C6EEC062D9CB53B00CB3E14 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6EEC132D9CB53C00CB3E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6EEC1D2D9CB53C00CB3E14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C6EEBFA2D9CB53700CB3E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6EEC0E2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodeld in Sources */,
+				9C6EEC0B2D9CB53B00CB3E14 /* Persistence.swift in Sources */,
+				9C6EEC042D9CB53700CB3E14 /* ContentView.swift in Sources */,
+				9C6EEC022D9CB53700CB3E14 /* Plant_TrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6EEC112D9CB53C00CB3E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6EEC1A2D9CB53C00CB3E14 /* Plant_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C6EEC1B2D9CB53C00CB3E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C6EEC242D9CB53C00CB3E14 /* Plant_TrackerUITests.swift in Sources */,
+				9C6EEC262D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C6EEC172D9CB53C00CB3E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6EEBFD2D9CB53700CB3E14 /* Plant Tracker */;
+			targetProxy = 9C6EEC162D9CB53C00CB3E14 /* PBXContainerItemProxy */;
+		};
+		9C6EEC212D9CB53C00CB3E14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6EEBFD2D9CB53700CB3E14 /* Plant Tracker */;
+			targetProxy = 9C6EEC202D9CB53C00CB3E14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9C6EEC272D9CB53C00CB3E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C6EEC282D9CB53C00CB3E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C6EEC2A2D9CB53C00CB3E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Plant Tracker/Plant_Tracker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Plant Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = M636J6ZUKK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Plant Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mayap.Plant-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C6EEC2B2D9CB53C00CB3E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Plant Tracker/Plant_Tracker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Plant Tracker/Preview Content\"";
+				DEVELOPMENT_TEAM = M636J6ZUKK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Plant Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mayap.Plant-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C6EEC2D2D9CB53C00CB3E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M636J6ZUKK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mayap.Plant-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plant Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Plant Tracker";
+			};
+			name = Debug;
+		};
+		9C6EEC2E2D9CB53C00CB3E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M636J6ZUKK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mayap.Plant-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plant Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Plant Tracker";
+			};
+			name = Release;
+		};
+		9C6EEC302D9CB53C00CB3E14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M636J6ZUKK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mayap.Plant-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Plant Tracker";
+			};
+			name = Debug;
+		};
+		9C6EEC312D9CB53C00CB3E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M636J6ZUKK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mayap.Plant-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Plant Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C6EEBF92D9CB53700CB3E14 /* Build configuration list for PBXProject "Plant Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6EEC272D9CB53C00CB3E14 /* Debug */,
+				9C6EEC282D9CB53C00CB3E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6EEC292D9CB53C00CB3E14 /* Build configuration list for PBXNativeTarget "Plant Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6EEC2A2D9CB53C00CB3E14 /* Debug */,
+				9C6EEC2B2D9CB53C00CB3E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6EEC2C2D9CB53C00CB3E14 /* Build configuration list for PBXNativeTarget "Plant TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6EEC2D2D9CB53C00CB3E14 /* Debug */,
+				9C6EEC2E2D9CB53C00CB3E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6EEC2F2D9CB53C00CB3E14 /* Build configuration list for PBXNativeTarget "Plant TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6EEC302D9CB53C00CB3E14 /* Debug */,
+				9C6EEC312D9CB53C00CB3E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9C6EEC0C2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9C6EEC0D2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodel */,
+			);
+			currentVersion = 9C6EEC0D2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodel */;
+			path = Plant_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9C6EEBF62D9CB53700CB3E14 /* Project object */;
+}
