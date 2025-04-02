@@ -39,7 +39,6 @@ struct ContentView: View {
                             .listRowInsets(EdgeInsets())
                             .listRowSeparator(.hidden)
                         }
-                        .onDelete(perform: deletePlants)
                     }
                     .listStyle(.plain)
                     .refreshable {
@@ -95,12 +94,7 @@ struct ContentView: View {
         }
     }
     
-    private func deletePlants(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { plants[$0] }.forEach(viewContext.delete)
-            try? viewContext.save()
-        }
-    }
+
 }
 
 struct AddPlantView: View {

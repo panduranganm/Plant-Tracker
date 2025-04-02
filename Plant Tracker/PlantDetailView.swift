@@ -2,10 +2,12 @@ import SwiftUI
 
 struct PlantDetailView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.dismiss) private var dismiss
     @ObservedObject var plant: Plant
     @State private var showingPhotoDetail = false
     @State private var selectedPhoto: Photo?
     @State private var isEditingPlant = false
+    @State private var showingDeleteConfirmation = false
     
     var body: some View {
         ScrollView {
@@ -48,9 +50,29 @@ struct PlantDetailView: View {
         }
         .navigationTitle(plant.customName ?? "Plant Details")
         .toolbar {
-            Button("Edit") {
-                isEditingPlant = true
+            ToolbarItem(placement: .primaryAction) {
+                Menu {
+                    Button("Edit") {
+                        isEditingPlant = true
+                    }
+                    
+                    Button(role: .destructive) {
+                        showingDeleteConfirmation = true
+                    } label: {
+                        Label("Delete Plant", systemImage: "trash")
+                    }
+                } label: {
+                    Image(systemName: "ellipsis.circle")
+                }
             }
+        }
+        .alert("Delete Plant", isPresented: $showingDeleteConfirmation) {
+            Button("Cancel", role: .cancel) { }
+            Button("Delete", role: .destructive) {
+                deletePlant()
+            }
+        } message: {
+            Text("Are you sure you want to delete this plant? This action cannot be undone and all associated photos will be deleted.")
         }
         .sheet(isPresented: $isEditingPlant) {
             NavigationView {
@@ -126,6 +148,21 @@ struct EditPlantView: View {
         plant.location = location.isEmpty ? nil : location
         
         try? viewContext.save()
+    }
+}
+
+// Function to delete the plant and dismiss the view
+private extension PlantDetailView {
+    func deletePlant() {
+        viewContext.delete(plant)
+        
+        do {
+            try viewContext.save()
+            // Dismiss the detail view after deletion
+            dismiss()
+        } catch {
+            print("Error deleting plant: \(error)")
+        }
     }
 }
 

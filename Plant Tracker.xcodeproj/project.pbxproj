@@ -32,6 +32,11 @@
 		9C6EEC1A2D9CB53C00CB3E14 /* Plant_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC192D9CB53C00CB3E14 /* Plant_TrackerTests.swift */; };
 		9C6EEC242D9CB53C00CB3E14 /* Plant_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC232D9CB53C00CB3E14 /* Plant_TrackerUITests.swift */; };
 		9C6EEC262D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6EEC252D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift */; };
+		9CB23DCA2D9DAAB0007C7EA4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB23DC52D9DAAAF007C7EA4 /* ErrorView.swift */; };
+		9CB23DCB2D9DAAB0007C7EA4 /* StatusOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB23DC62D9DAAAF007C7EA4 /* StatusOverlayView.swift */; };
+		9CB23DCC2D9DAAB0007C7EA4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB23DC72D9DAAAF007C7EA4 /* CardView.swift */; };
+		9CB23DCD2D9DAAB0007C7EA4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB23DC82D9DAAAF007C7EA4 /* LoadingView.swift */; };
+		9CB23DCE2D9DAAB0007C7EA4 /* RefreshableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB23DC92D9DAAAF007C7EA4 /* RefreshableScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		9C6EEC1F2D9CB53C00CB3E14 /* Plant TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plant TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6EEC232D9CB53C00CB3E14 /* Plant_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_TrackerUITests.swift; sourceTree = "<group>"; };
 		9C6EEC252D9CB53C00CB3E14 /* Plant_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9CB23DC52D9DAAAF007C7EA4 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		9CB23DC62D9DAAAF007C7EA4 /* StatusOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusOverlayView.swift; sourceTree = "<group>"; };
+		9CB23DC72D9DAAAF007C7EA4 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9CB23DC82D9DAAAF007C7EA4 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		9CB23DC92D9DAAAF007C7EA4 /* RefreshableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshableScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,11 @@
 		9C6EEC002D9CB53700CB3E14 /* Plant Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				9CB23DC72D9DAAAF007C7EA4 /* CardView.swift */,
+				9CB23DC52D9DAAAF007C7EA4 /* ErrorView.swift */,
+				9CB23DC82D9DAAAF007C7EA4 /* LoadingView.swift */,
+				9CB23DC92D9DAAAF007C7EA4 /* RefreshableScrollView.swift */,
+				9CB23DC62D9DAAAF007C7EA4 /* StatusOverlayView.swift */,
 				9C1B49682D9CF2ED00D1BAD6 /* PhotoDetailView.swift */,
 				9C1B49672D9CF2ED00D1BAD6 /* PlantDetailView.swift */,
 				9C1B495F2D9CF20200D1BAD6 /* DataManager.swift */,
@@ -312,13 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB23DCC2D9DAAB0007C7EA4 /* CardView.swift in Sources */,
 				9C1B49622D9CF20200D1BAD6 /* PlantListItemView.swift in Sources */,
+				9CB23DCB2D9DAAB0007C7EA4 /* StatusOverlayView.swift in Sources */,
+				9CB23DCE2D9DAAB0007C7EA4 /* RefreshableScrollView.swift in Sources */,
 				9C6EEC0E2D9CB53B00CB3E14 /* Plant_Tracker.xcdatamodeld in Sources */,
 				9C1B49652D9CF20200D1BAD6 /* EmptyStateView.swift in Sources */,
 				9C6EEC0B2D9CB53B00CB3E14 /* Persistence.swift in Sources */,
 				9C1B49642D9CF20200D1BAD6 /* DataManager.swift in Sources */,
 				9C6EEC042D9CB53700CB3E14 /* ContentView.swift in Sources */,
+				9CB23DCD2D9DAAB0007C7EA4 /* LoadingView.swift in Sources */,
 				9C1B49662D9CF20200D1BAD6 /* PhotoThumbnailView.swift in Sources */,
+				9CB23DCA2D9DAAB0007C7EA4 /* ErrorView.swift in Sources */,
 				9C6EEC022D9CB53700CB3E14 /* Plant_TrackerApp.swift in Sources */,
 				9C1B496A2D9CF2ED00D1BAD6 /* PhotoDetailView.swift in Sources */,
 				9C1B49632D9CF20200D1BAD6 /* FormComponents.swift in Sources */,
