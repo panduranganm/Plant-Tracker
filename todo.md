@@ -11,35 +11,35 @@
 
 ## Phase 2: Core Data Model
 
-- [ ] Create Plant entity
-  - [ ] Custom name (String, required)
-  - [ ] Scientific name (String, optional)
-  - [ ] Location (String, optional)
-  - [ ] Creation date (Date)
-  - [ ] Relationship to photos (one-to-many)
+- [x] Create Plant entity
+  - [x] Custom name (String, required)
+  - [x] Scientific name (String, optional)
+  - [x] Location (String, optional)
+  - [x] Creation date (Date)
+  - [x] Relationship to photos (one-to-many)
 
-- [ ] Create Photo entity
-  - [ ] Image path (String)
-  - [ ] Date taken (Date)
-  - [ ] Notes (String, optional)
-  - [ ] Relationship to plant (many-to-one)
+- [x] Create Photo entity
+  - [x] Image path (String)
+  - [x] Date taken (Date)
+  - [x] Notes (String, optional)
+  - [x] Relationship to plant (many-to-one)
 
 - [x] Implement Core Data stack
-- [ ] Create data manager for CRUD operations
-- [ ] Write unit tests for data model
+- [x] Create data manager for CRUD operations
+- [x] Write unit tests for data model
 
 ## Phase 3: Basic UI Components
 
-- [ ] Design and implement navigation system
-- [ ] Create reusable UI components:
-  - [ ] Plant list item cell
-  - [ ] Photo thumbnail cell
-  - [ ] Custom text fields
-  - [ ] Form components
+- [x] Design and implement navigation system
+- [x] Create reusable UI components:
+  - [x] Plant list item cell
+  - [x] Photo thumbnail cell
+  - [x] Custom text fields
+  - [x] Form components
   - [ ] Photo detail view
 
 - [ ] Implement modal presentation controllers
-- [ ] Create loading and empty state views
+- [x] Create loading and empty state views
 
 ## Phase 4: Camera & Photo Library Integration
 
@@ -85,10 +85,12 @@
   - [ ] Save functionality
 
 - [ ] Create Photo Detail view
-  - [ ] Full-screen photo display
-  - [ ] Date and notes display
-  - [ ] Edit and delete options
-  - [ ] Navigation between photos
+  - [ ] Card-style photo display with shadow and rounded corners
+  - [ ] Front/back card flip animation implementation
+  - [ ] Front: Photo and date display
+  - [ ] Back: Notes, edit and delete options
+  - [ ] Tap/swipe gesture recognizer for flipping
+  - [ ] Navigation arrows to move between photos
 
 ## Phase 8: Plant Detail View
 

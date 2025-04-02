@@ -87,10 +87,16 @@ Appears when tapping "+" on home screen or plant detail view, with options:
 - Cancel button to discard the photo
 
 ### 3.6 Photo Detail View
-- Full-screen view of the selected photo
-- Date and notes displayed
-- Edit and delete options
-- Navigation to move between photos chronologically
+- Card-style presentation of the photo with flip animation
+- Front side display:
+  - Full photo view
+  - Date displayed at bottom
+- Back side display:
+  - Notes content
+  - Edit and delete options
+- Interaction features:
+  - Tap or swipe gesture to flip card
+  - Navigation arrows for chronological photo browsing
 
 ## 4. User Flows
 

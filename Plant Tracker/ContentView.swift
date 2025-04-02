@@ -10,77 +10,149 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
+    @State private var showingAddPlant = false
+    @State private var showingPhotoOptions = false
+    @State private var selectedPhoto: Photo?
+    
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Plant.creationDate, ascending: false)],
         animation: .default)
-    private var items: FetchedResults<Item>
-
+    private var plants: FetchedResults<Plant>
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+        NavigationStack {
+            ZStack {
+                if plants.isEmpty {
+                    EmptyStateView(
+                        systemImage: "leaf.circle",
+                        title: "No Plants Yet",
+                        message: "Add your first plant to start tracking its growth journey",
+                        action: { showingAddPlant = true },
+                        actionTitle: "Add Plant"
+                    )
+                } else {
+                    List {
+                        ForEach(plants) { plant in
+                            NavigationLink(destination: PlantDetailView(plant: plant)) {
+                                PlantListItemView(plant: plant)
+                            }
+                            .listRowInsets(EdgeInsets())
+                            .listRowSeparator(.hidden)
+                        }
+                        .onDelete(perform: deletePlants)
+                    }
+                    .listStyle(.plain)
+                    .refreshable {
+                        // Refresh Core Data fetch
+                        viewContext.refreshAllObjects()
                     }
                 }
-                .onDelete(perform: deleteItems)
             }
+            .navigationTitle("My Plants")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                    Button(action: { showingPhotoOptions = true }) {
+                        Image(systemName: "plus")
+                    }
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                
+                if !plants.isEmpty {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
                     }
                 }
             }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            .sheet(isPresented: $showingAddPlant) {
+                NavigationStack {
+                    AddPlantView()
+                }
+            }
+            .sheet(item: $selectedPhoto) { photo in
+                NavigationStack {
+                    PhotoDetailView(
+                        photo: photo,
+                        onDelete: {
+                            if let context = photo.managedObjectContext {
+                                context.delete(photo)
+                                try? context.save()
+                            }
+                        }
+                    )
+                }
+            }
+            .actionSheet(isPresented: $showingPhotoOptions) {
+                ActionSheet(
+                    title: Text("Add New"),
+                    message: Text("Choose an option"),
+                    buttons: [
+                        .default(Text("Add Plant")) { showingAddPlant = true },
+                        .default(Text("Take Photo")) { /* Camera implementation coming soon */ },
+                        .default(Text("Choose from Library")) { /* Photo picker implementation coming soon */ },
+                        .cancel()
+                    ]
+                )
             }
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
+    
+    private func deletePlants(offsets: IndexSet) {
         withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            offsets.map { plants[$0] }.forEach(viewContext.delete)
+            try? viewContext.save()
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+struct AddPlantView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.dismiss) private var dismiss
+    
+    @State private var customName = ""
+    @State private var scientificName = ""
+    @State private var location = ""
+    @State private var notes = ""
+    
+    var body: some View {
+        Form {
+            FormSection("Plant Details") {
+                FormTextField("Plant Name", text: $customName, placeholder: "Enter plant name", isRequired: true)
+                FormTextField("Scientific Name", text: $scientificName, placeholder: "Enter scientific name")
+                FormTextField("Location", text: $location, placeholder: "Where is this plant located?")
+                FormTextEditor(label: "Notes", text: $notes, placeholder: "Enter any notes about your plant...")
+            }
+        }
+        .scrollDismissesKeyboard(.interactively)
+        .navigationTitle("Add Plant")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Cancel") {
+                    dismiss()
+                }
+            }
+            
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") {
+                    savePlant()
+                }
+                .disabled(customName.isEmpty)
+            }
+        }
+    }
+    
+    private func savePlant() {
+        let plant = Plant(context: viewContext)
+        plant.customName = customName
+        plant.scientificName = scientificName.isEmpty ? nil : scientificName
+        plant.location = location.isEmpty ? nil : location
+        plant.creationDate = Date()
+        
+        try? viewContext.save()
+        dismiss()
+    }
+}
 
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView()
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

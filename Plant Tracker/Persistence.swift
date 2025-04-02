@@ -13,9 +13,20 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        
+        // Add sample plants
+        let samplePlants = [
+            ("Monstera", "Monstera deliciosa", "Living Room"),
+            ("Snake Plant", "Sansevieria trifasciata", "Bedroom"),
+            ("Peace Lily", "Spathiphyllum", "Office")
+        ]
+        
+        for (name, scientific, location) in samplePlants {
+            let plant = Plant(context: viewContext)
+            plant.customName = name
+            plant.scientificName = scientific
+            plant.location = location
+            plant.creationDate = Date()
         }
         do {
             try viewContext.save()
