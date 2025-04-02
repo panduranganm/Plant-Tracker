@@ -7,8 +7,6 @@
 - [x] Set up Git repository
 - [ ] Create project folder structure
 - [x] Set up Core Data model
-- [ ] Design color scheme and typography
-- [ ] Create app icon and launch screen
 - [ ] Configure camera and photo library permissions
 
 ## Phase 2: Core Data Model

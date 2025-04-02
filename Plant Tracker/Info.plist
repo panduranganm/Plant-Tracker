@@ -6,5 +6,9 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>PlantTracker needs access to your camera to take photos of your plants.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>PlantTracker needs access to your photo library to select existing plant photos.</string>
 </dict>
 </plist>
